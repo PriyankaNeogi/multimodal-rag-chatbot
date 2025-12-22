@@ -1,69 +1,109 @@
+Here is the **updated README.md content** with a **clear, explicit tip** added about running **frontend and backend in two different terminals**.
+You can **replace your existing README.md** with this version or copy only the **TIP section** if you prefer.
 
+---
 
-## Features
+# Multimodal RAG Chatbot (Text + Image + PDF)
 
-- Upload PDF documents
-- Extract and embed:
-  - Text content
-  - Images inside PDFs
-- Store embeddings in FAISS
-- Ask natural language questions
-- LLM answers using retrieved **text + image context**
-- Clean UI built with Next.js
+This repository contains a **Multimodal Retrieval-Augmented Generation (RAG) Chatbot** that can process **PDF documents containing both text and images**, index them, and answer user queries using **Groq LLM**, **CLIP-based embeddings**, and **FAISS vector search**.
+
+---
+
+## Important Tip (Read This First)
+
+**The backend and frontend must be running in two separate terminals.**
+
+* The **backend (FastAPI)** runs on port `8000`
+* The **frontend (Vercel / Next.js)** runs on port `3000`
+
+Both servers must be running **at the same time** for the application to work correctly.
+
+---
+
+## Tech Stack
+
+### Backend
+
+* Python 3.10+
+* FastAPI
+* LangChain
+* Groq API
+* CLIP (Transformers)
+* FAISS
+* PyMuPDF
+
+### Frontend
+
+* Next.js
+* Vercel AI SDK
 
 ---
 
 ## Project Structure
 
 ```
-
 multimodal-rag-chatbot/
+│
 ├── backend/
 │   ├── app.py
-│   └── requirements.txt
+│   ├── requirements.txt
+│   ├── .env.example
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── components/
-│   │   └── lib/
-│   └── package.json
+│   ├── app/
+│   │   └── page.tsx
+│   ├── package.json
+│   └── next.config.js
 │
-└── .gitignore
-
-````
+└── README.md
+```
 
 ---
 
-## Backend Setup (FastAPI)
+## Environment Variables
 
-### 1. Create virtual environment
-```bash
-python -m venv venv
-source venv/bin/activate
-````
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Set environment variables
-
-Create `.env` inside `backend/`:
+Create a `.env` file inside the `backend` folder:
 
 ```
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 4. Run backend
+---
+
+## Backend Setup (Terminal 1)
+
+### Step 1: Open Terminal 1 and go to backend
 
 ```bash
-uvicorn app:app --reload
+cd backend
 ```
 
-Backend will be available at:
+### Step 2: Create and activate virtual environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Step 3: Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Start backend server
+
+```bash
+uvicorn app:app --reload --port 8000
+```
+
+Backend URL:
+
+```
+http://localhost:8000
+```
+
+Swagger UI:
 
 ```
 http://localhost:8000/docs
@@ -71,22 +111,31 @@ http://localhost:8000/docs
 
 ---
 
-## Frontend Setup (Next.js)
+## Frontend Setup (Terminal 2)
 
-### 1. Install dependencies
+### Step 1: Open a **new terminal window**
+
+Do **not** stop the backend server.
+
+### Step 2: Navigate to frontend
 
 ```bash
 cd frontend
+```
+
+### Step 3: Install dependencies
+
+```bash
 npm install
 ```
 
-### 2. Run frontend
+### Step 4: Start frontend server
 
 ```bash
 npm run dev
 ```
 
-Frontend runs at:
+Frontend URL:
 
 ```
 http://localhost:3000
@@ -94,41 +143,45 @@ http://localhost:3000
 
 ---
 
-## How It Works (High Level)
+## How the Two Terminals Work Together
 
-1. User uploads a PDF
-2. Backend:
+* **Terminal 1**
+  Runs FastAPI backend
+  Handles PDF upload, embedding, retrieval, and LLM responses
 
-   * Extracts text + images
-   * Generates CLIP embeddings
-   * Stores them in FAISS
-3. User asks a question
-4. Relevant text + image references are retrieved
-5. Groq LLM generates the final answer
+* **Terminal 2**
+  Runs Next.js frontend
+  Sends requests to backend APIs and displays responses
 
----
-
-## Notes
-
-* Images are **not directly viewed by the LLM**
-* Their presence and page context are included in prompts
-* Designed for clarity, speed, and low memory usage
+If **either terminal is stopped**, the application will not function.
 
 ---
 
-## Future Improvements
+## API Example
 
-* Persistent vector storage
-* Multi-document support
-* Streaming responses
-* UI enhancements
-* Deployment on Vercel + Render
+### Query Endpoint
+
+```json
+POST /query
+{
+  "question": "What do images indicate?"
+}
+```
+
+Response:
+
+```json
+{
+  "answer": "Based on the provided text and image context..."
+}
+```
+
 
 ---
 
 ## Author
 
-**Priyanka Neogi**
+Developed by **Priyanka Neogi**
 
-```
+---
 
