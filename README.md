@@ -211,6 +211,14 @@ Response:
 
 ---
 
+## Development Workflow Summary - 
+
+* Backend (FastAPI + Vercel AI SDK patterns)
+* Frontend (Next.js + Vercel AI SDK)
+* Both run locally in separate terminals during development
+
+---
+
 ## Author
 
 Developed by **Priyanka Neogi**
