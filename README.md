@@ -86,10 +86,12 @@ source venv/bin/activate
 Windows (PowerShell)
 cd backend
 venv\Scripts\activate
+```
+
 After activation, your terminal will show something like:
 (venv)
 This confirms that the correct Python environment is active.
-```
+
 
 ---
 ### Step 1: Open Terminal 1 and go to backend
