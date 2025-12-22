@@ -107,6 +107,14 @@ Swagger UI:
 ```
 http://localhost:8000/docs
 ```
+<img width="1438" height="815" alt="Screenshot 2025-12-22 at 2 09 50 PM" src="https://github.com/user-attachments/assets/fac6868f-1bca-4729-8958-b564d23416d2" />
+
+<img width="1438" height="815" alt="Screenshot 2025-12-22 at 2 10 02 PM" src="https://github.com/user-attachments/assets/9e016313-72cf-42a7-90d4-67f5258dded5" />
+
+<img width="1438" height="815" alt="Screenshot 2025-12-22 at 2 10 08 PM" src="https://github.com/user-attachments/assets/637eb55f-c6f0-45dd-866c-a144492e5c03" />
+
+<img width="1438" height="815" alt="Screenshot 2025-12-22 at 2 10 14 PM" src="https://github.com/user-attachments/assets/57528591-ba42-4a08-a407-c59f7510f694" />
+
 
 ---
 
@@ -139,6 +147,8 @@ Frontend URL:
 ```
 http://localhost:3000
 ```
+
+<img width="1438" height="815" alt="Screenshot 2025-12-22 at 2 10 19 PM" src="https://github.com/user-attachments/assets/cb3dd2e2-ad48-4674-b55c-648bef00c645" />
 
 ---
 
