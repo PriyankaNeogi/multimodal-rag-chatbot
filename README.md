@@ -75,10 +75,12 @@ GROQ_API_KEY=your_groq_api_key_here
 
 ## Important Tip: Activate Virtual Environment (Local Development) - 
 
-```
+
 Before running the backend on your local system, always activate the virtual environment.
 If the virtual environment is not activated, Python may not find the required packages and the backend will fail to start.
 macOS / Linux
+
+```
 cd backend
 source venv/bin/activate
 Windows (PowerShell)
