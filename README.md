@@ -1,41 +1,4 @@
-Perfect. Your repository is **now clean, public, and correctly pushed**.
-What you’re seeing on GitHub is **exactly what it should look like** at this stage.
 
-Now I’ll guide you **step by step**, from **this exact screen**, without assuming you know anything.
-
----
-
-## STEP 1 — ADD A PROPER README (VERY IMPORTANT)
-
-Right now GitHub is showing **“Add a README”**.
-Every evaluator / recruiter / reviewer **expects this**.
-
-### Option A (EASIEST — do this now)
-
-1. On your GitHub repo page, click the green **“Add a README”** button.
-2. GitHub will open an editor.
-3. **Delete everything inside** and paste the content I give you below.
-4. Scroll down → click **Commit new file** (keep defaults).
-
----
-
-### ✅ COPY–PASTE THIS README CONTENT
-
-```
-# Multimodal RAG Chatbot (Groq + CLIP)
-
-This project is a **Multimodal Retrieval-Augmented Generation (RAG) chatbot**
-capable of answering questions based on **both text and images extracted from PDFs**.
-
-It uses:
-- **FastAPI** for backend APIs
-- **CLIP (OpenAI)** for unified text + image embeddings
-- **FAISS** for vector similarity search
-- **Groq LLM (LLaMA 3.1)** for fast inference
-- **Next.js (App Router)** for frontend UI
-- **Vercel AI SDK style API routes**
-
----
 
 ## Features
 
