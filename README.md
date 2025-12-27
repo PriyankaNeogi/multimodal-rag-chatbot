@@ -33,7 +33,7 @@ Both servers must be running **at the same time** for the application to work co
 
 ### Frontend
 
-* Next.js
+* Node.js
 * Vercel AI SDK
 
 ---
