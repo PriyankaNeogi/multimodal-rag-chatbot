@@ -13,7 +13,7 @@ This repository contains a **Multimodal Retrieval-Augmented Generation (RAG) Cha
 **The backend and frontend must be running in two separate terminals.**
 
 * The **backend (FastAPI)** runs on port `8000`
-* The **frontend (Vercel / Node.js)** runs on port `3000`
+* The **frontend (Vercel / Next.js)** runs on port `3000`
 
 Both servers must be running **at the same time** for the application to work correctly.
 
@@ -33,7 +33,7 @@ Both servers must be running **at the same time** for the application to work co
 
 ### Frontend
 
-* Node.js
+* Next.js
 * Vercel AI SDK
 
 ---
@@ -184,7 +184,7 @@ http://localhost:3000
   Handles PDF upload, embedding, retrieval, and LLM responses
 
 * **Terminal 2**
-  Runs Node.js frontend
+  Runs Next.js frontend
   Sends requests to backend APIs and displays responses
 
 If **either terminal is stopped**, the application will not function.
