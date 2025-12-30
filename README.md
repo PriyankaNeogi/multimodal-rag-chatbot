@@ -106,7 +106,7 @@ cd backend
 
 ```bash
 python3 -m venv 
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 ### Step 3: Install dependencies
